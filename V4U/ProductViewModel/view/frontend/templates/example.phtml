@@ -1,0 +1,14 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \\V4U\ProductViewModel\ViewModel\Product $viewModel */
+$productViewModel = $block->getProductViewModel();
+$products = $productViewModel->getProducts();
+?>
+<div class="products">
+    <h3>V4U ViewModel Products</h3>
+    <ul>
+        <?php foreach ($products as $product): ?>
+            <li><?= $product->getName() ?></li>
+        <?php endforeach; ?>
+    </ul>
+</div>
